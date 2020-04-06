@@ -1,6 +1,6 @@
 {
-	"name": "Victor Tsang Portfolio",
-	"short_name": "vktr.me",
+	"name": "Pugsum",
+	"short_name": "Pugsum",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -13,8 +13,7 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#0856c1",
-	"background_color": "#0856c1",
-	"display": "standalone",
-	"start_url": "/"
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
+	"display": "standalone"
 }
