@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "./core/generic_boxsizing";
+@import "./vendors/tailwind";
+
+p {
+	@apply font-bold;
+}
+
+nav li {
+	&:not(:last-child) {
+		@apply mr-4;
+	}
+}
+
+a.active {
+	@apply text-red-900 underline;
+}

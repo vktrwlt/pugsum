@@ -1,0 +1,9 @@
+extends ../_includes/layouts/default.pug
+
+block content
+	section(class="p-12 bg-red-200 rounded-lg shadow-2xl")
+		div(class="text-center")
+			div(class="flex justify-center mb-8")
+				+picture("/assets/images/","pugsum",['webp','png'])
+			h1(class="text-4xl") Pugsum
+			h2(class="text-2xl") When you combine a pug and a possum to make something awesome &mdash; a 11ty starter kit with Pug templates and TailwindCSS

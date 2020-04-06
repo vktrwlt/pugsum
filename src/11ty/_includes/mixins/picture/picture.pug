@@ -1,0 +1,8 @@
+mixin picture(path, name, type, alt)
+
+	picture
+		each ext in type
+			source(srcset=`${path}/${name}.${ext}` type=`image/${ext}`)
+		img(src=`${path}/${name}.${type[type.length-1]}`, loading="lazy")&attributes(alt === "" ? {'role': 'presentation','alt':''}: {'alt': alt})
+
+//- pug renders alt="" as alt which is not ideal, added role='presentation' for a11y

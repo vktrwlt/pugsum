@@ -1,0 +1,30 @@
+doctype html
+//- Import mixins here to use globally
+include ../../_includes/mixins/mixins.pug
+html(lang='en-us' class='antialiased overflow-y-scroll')
+	head
+		//- Meta Tags
+		title=site.metaTitle
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content=site.metaDescription)
+		meta(name='author', content=site.author)
+		meta(name="theme-color" content="#317EFB")
+
+		link(rel='canonical', href=site.url + page.fileSlug)
+		link(rel="manifest" href="/manifest.json")
+		link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+		link(rel="shortcut icon", href="/favicon.ico")
+		link(rel='stylesheet', href=manifest["main.css"])
+		if(project.production)
+			script(defer src=manifest["sw.js"])
+
+	body
+		a(class="sr-only" href="#main") Skip to content
+		include ../partials/header.pug
+		div.flex.flex-col.min-h-screen
+			include ../partials/main.pug
+				block content
+
+	script(src=manifest["main.js"])

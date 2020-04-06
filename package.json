@@ -1,0 +1,80 @@
+{
+	"name": "pugsum",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [
+		"11ty",
+		"eleventy",
+		"scss",
+		"tailwind",
+		"webpack",
+		"purgecss",
+		"pug"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@11ty/eleventy": "^0.10.0",
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"@fullhuman/postcss-purgecss": "^2.1.0",
+		"autoprefixer": "^9.7.5",
+		"babel-loader": "^8.1.0",
+		"babel-preset-env": "^1.7.0",
+		"browserlist": "^1.0.1",
+		"copy-webpack-plugin": "^5.1.1",
+		"css-loader": "^3.4.2",
+		"cssnano": "^4.1.10",
+		"eleventy-plugin-pwa": "^1.0.8",
+		"file-loader": "^6.0.0",
+		"html-minifier": "^4.0.0",
+		"imagemin-webp": "^5.1.0",
+		"imagemin-webpack-plugin": "^2.4.2",
+		"live-server": "^1.2.1",
+		"mini-css-extract-plugin": "^0.9.0",
+		"minimist": "^1.2.5",
+		"node-sass": "^4.13.1",
+		"npm-check-updates": "^4.1.0",
+		"npm-force-resolutions": "0.0.3",
+		"npm-run-all": "^4.1.5",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"postcss-loader": "^3.0.0",
+		"postcss-scss": "^2.0.0",
+		"prettier": "^2.0.2",
+		"pug-lint": "^2.6.0",
+		"sass-loader": "^8.0.2",
+		"tailwindcss": "^1.2.0",
+		"terser-webpack-plugin": "^2.3.5",
+		"webpack": "^4.42.1",
+		"webpack-assets-manifest": "^3.1.1",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2"
+	},
+	"browserslist": [
+		"last 2 versions",
+		"> 1%",
+		"not dead"
+	],
+	"resolutions": {
+		"minimist": "^1.2.5"
+	},
+	"scripts": {
+		"preinstall": "npx npm-force-resolutions",
+		"prestart": "npm run clean",
+		"start": "NODE_ENV=development npm-run-all -p dev:webpack dev:eleventy",
+		"dev:webpack": "npx webpack --config ./build/webpack/webpack.dev.config.js --progress --colors --watch",
+		"dev:eleventy": "npx eleventy --config ./config/eleventy.config.js --serve",
+		"build": "NODE_ENV=production npm-run-all -s clean build:*",
+		"build:webpack": "NODE_ENV=production npx webpack --config ./build/webpack/webpack.prod.config.js",
+		"build:eleventy": "NODE_ENV=production npx eleventy --config ./config/eleventy.config.js",
+		"clean": "rm -rf ./dist",
+		"update": "npx ncu -u; npm install",
+		"update-check": "npx npm-check-updates",
+		"serve": "npx live-server ./dist --port=8080 --host=localhost"
+	},
+	"author": "Victor Tsang",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vktrwlt/pugsum.git"
+	}
+}
