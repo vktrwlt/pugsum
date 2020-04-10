@@ -70,7 +70,7 @@ module.exports = {
 	},
 	plugins: [
 		new WebpackAssetsManifest({
-			output: path.resolve(paths.dist, "manifest.json"),
+			output: path.resolve(paths.dist, "assets.json"),
 			publicPath: "/assets/",
 			writeToDisk: true,
 			apply(manifest) {
@@ -78,7 +78,7 @@ module.exports = {
 			},
 		}),
 		new WebpackAssetsManifest({
-			output: path.resolve(paths.src, "11ty/_data/manifest.json"),
+			output: path.resolve(paths.src, "11ty/_data/assets.json"),
 			publicPath: "/assets/",
 			writeToDisk: true,
 			apply(manifest) {
