@@ -91,7 +91,7 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{
 				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
-				to: "./images/[name].webp",
+				to: "images/[name].webp",
 			},
 		]),
 		new ImageminWebpackPlugin({
