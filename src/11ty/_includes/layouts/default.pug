@@ -16,9 +16,9 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 		link(rel="manifest" href="/manifest.json")
 		link(rel="apple-touch-icon" href="/apple-touch-icon.png")
 		link(rel="shortcut icon", href="/favicon.ico")
-		link(rel='stylesheet', href=manifest["main.css"])
+		link(rel='stylesheet', href=assets["main.css"])
 		if(project.production)
-			script(defer src=manifest["sw.js"])
+			script(defer src=assets["sw.js"])
 
 	body
 		a(class="sr-only" href="#main") Skip to content
@@ -27,4 +27,4 @@ html(lang='en-us' class='antialiased overflow-y-scroll')
 			include ../partials/main.pug
 				block content
 
-	script(src=manifest["main.js"])
+	script(src=assets["main.js"])
