@@ -9,6 +9,7 @@ module.exports = merge(webpackBaseConfig, {
 	mode: "production",
 	output: {
 		filename: "js/[name].[hash].js",
+		publicPath: "/",
 	},
 
 	plugins: [

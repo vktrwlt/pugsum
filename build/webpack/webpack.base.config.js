@@ -28,8 +28,8 @@ module.exports = {
 		main: path.resolve(paths.srcAssets, "js/main.js"),
 	},
 	output: {
-		path: path.resolve(paths.dist, "assets/"),
-		publicPath: "assets/",
+		path: path.resolve(paths.dist, "assets"),
+		publicPath: "/assets/",
 		filename: "[name].js",
 	},
 	module: {
@@ -91,7 +91,7 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{
 				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
-				to: "images/[name].webp",
+				to: "./images/[name].webp",
 			},
 		]),
 		new ImageminWebpackPlugin({
