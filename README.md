@@ -8,6 +8,7 @@ Features:
 - [PostCSS](https://postcss.org/) for processing Tailwind
 - [Sass/SCSS](https://github.com/sass/node-sass) for leveraging other vendor stylesheets with Tailwind
 - [Webpack](https://webpack.js.org/) for optimizing our JS and CSS files
+- [Webpack-dev-server](https://webpack.js.org/configuration/dev-server/) for HMR and live-reload
 - [Babel](https://babeljs.io/) for ES6 support
 - [HTML minifier](https://www.npmjs.com/package/html-minifier) to minify production HTML
 
@@ -30,7 +31,7 @@ npm install
 # run the build and server locally
 npm start
 
-View the site at http://localhost:8080/
+View the site at http://localhost:3000/
 ```
 
 ## Previewing the production build
