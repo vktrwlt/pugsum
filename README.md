@@ -1,4 +1,5 @@
 # Pugsum: A 11ty starter kit using Pug Templates and TailwindCSS
+[Demo](https://pugsum.netlify.app/)
 
 Features:
 
